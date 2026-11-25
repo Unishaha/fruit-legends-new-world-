@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071626">
+  <title>Fruit Legends: New World</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="loading">
+    <h1>FRUIT LEGENDS</h1>
+    <p>Loading New World...</p>
+    <div class="loader"></div>
+  </div>
+
+  <div id="game">
+    <header class="topbar">
+      <div class="brand">🍈 FRUIT <span>LEGENDS</span></div>
+      <div class="location">ISLAND 01 · BEGINNER'S PARADISE</div>
+      <button id="menuBtn">☰ MENU</button>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card">
+        <div>PLAYER LEVEL <b id="level">1</b></div>
+        <div class="bar"><div id="xpBar"></div></div>
+        <small id="xpText">0 / 100 XP</small>
+      </div>
+      <div class="stat-card">
+        <div>HEALTH <b id="healthText">100 / 100</b></div>
+        <div class="bar health"><div id="healthBar"></div></div>
+      </div>
+      <div class="stat-card">
+        <div>FRUIT ENERGY <b id="energyText">100%</b></div>
+        <div class="bar energy"><div id="energyBar"></div></div>
+      </div>
+    </section>
+
+    <div class="quest">
+      <b>✦ CURRENT QUEST</b>
+      <p>Defeat 3 Island Bandits</p>
+      <small id="questCount">Progress: 0 / 3</small>
+    </div>
+
+    <div class="crosshair">+</div>
+    <div id="message"></div>
+
+    <div id="menu" class="overlay hidden">
+      <div class="menu-panel">
+        <h1>PAUSED</h1>
+        <button id="resumeBtn">RESUME ADVENTURE</button>
+        <p>WASD: Move · Mouse: Camera</p>
+        <p>Space: Jump · E: Attack · Q: Fruit Power</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="move-controls">
+        <button data-move="forward">▲</button>
+        <div>
+          <button data-move="left">◀</button>
+          <button data-move="backward">▼</button>
+          <button data-move="right">▶</button>
+        </div>
+      </div>
+      <div class="action-controls">
+        <button id="jumpBtn">JUMP</button>
+        <button id="attackBtn">ATTACK</button>
+        <button id="powerBtn">FRUIT POWER</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
